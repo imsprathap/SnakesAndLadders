@@ -1,5 +1,10 @@
 package org.target.snakesAndLadders;
 
+/**
+ * This class will have constants 
+ * @author sprathap
+ *
+ */
 public final class Constants {
 
 	private Constants() {
@@ -12,5 +17,8 @@ public final class Constants {
 	public static final String SPRING = "SPRING";
 	public static final String PITSTOP = "PITSTOP";
 	public static final String EMPTY = "EMPTY";
+	
+	public static final String ANSI_RESET = "\u001B[0m";
+	public static final String ANSI_RED = "\033[1;91m";
 
 }

@@ -6,6 +6,11 @@ import java.util.Map;
 
 import org.target.snakesAndLadders.model.PropertyModel;
 
+/**
+ * This class will create Board to play the game
+ * @author sprathap
+ *
+ */
 public class BoardGenerator {
 
 	public Map<Integer, PropertyModel> getBoard(int nSquares) {
@@ -20,19 +25,21 @@ public class BoardGenerator {
 		List<String> propertyList = GameUtils.getPropertiesList();
 		PropertyModel propertyModel = new PropertyModel();
 		String propertyName = "";
-		
-		if((startPos == 1) || (startPos == endPos)){
+
+		if ((startPos == 1) || (startPos == endPos)) {
 			propertyName = Constants.EMPTY;
-		}else{
+		} else {
 			propertyName = propertyList.get(GameUtils.generateRandom(0, 5));
 		}
 		propertyModel.setPropertyType(propertyName);
 
 		int nextPos = 0;
-		if(null != propertyName && !"".equalsIgnoreCase(propertyName) && Constants.SNAKE.equalsIgnoreCase(propertyName)){
-			nextPos = GameUtils.generateRandom(1,startPos-1);
-		}else if(null != propertyName && !"".equalsIgnoreCase(propertyName) && Constants.LADDER.equalsIgnoreCase(propertyName)){
-			nextPos = GameUtils.generateRandom(startPos+1,endPos);
+		if (null != propertyName && !"".equalsIgnoreCase(propertyName)
+				&& Constants.SNAKE.equalsIgnoreCase(propertyName)) {
+			nextPos = GameUtils.generateRandom(1, startPos - 1);
+		} else if (null != propertyName && !"".equalsIgnoreCase(propertyName)
+				&& Constants.LADDER.equalsIgnoreCase(propertyName)) {
+			nextPos = GameUtils.generateRandom(startPos + 1, endPos);
 		}
 		propertyModel.setNextPosition(nextPos);
 

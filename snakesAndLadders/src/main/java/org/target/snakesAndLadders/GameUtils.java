@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * This class will contain util functions 
+ * @author sprathap
+ *
+ */
 public final class GameUtils {
 	
 	private GameUtils(){
